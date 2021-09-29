@@ -1,4 +1,5 @@
 OE_APP_ID
+.vscode
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
