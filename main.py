@@ -1,6 +1,4 @@
 import requests
-import json
-import sys
 
 
 class CurrencyConverter:
@@ -8,7 +6,7 @@ class CurrencyConverter:
         self.app_id = app_id
 
     # Get latest currency data from openexchangerates
-    def get_rates(self, base):
+    def get_rates(self, base="USD"):
 
         params = {"app_id": self.app_id, "base": base}
 
@@ -43,6 +41,8 @@ def help():
 
 
 def get_args():
+    import sys
+
     args = sys.argv[1:]
 
     if args[0] == "-h" or args[0] == "--help" or len(args) != 3:
